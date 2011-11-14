@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.charset">utf8</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost/wiktionary</property>
+        <property name="hibernate.connection.username">test</property>
+        <property name="hibernate.connection.password">test</property>
+
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="show_sql">false</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- ================ CONNECTION POOL SETTINGS ================ -->
+
+        <property name="hibernate.c3p0.validate">true</property>
+        <property name="connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+        <property name="hibernate.c3p0.min_size">65</property>
+        <property name="hibernate.c3p0.max_size">65</property>
+        <property name="hibernate.c3p0.timeout">60</property>
+        <property name="hibernate.c3p0.max_statements">100</property>
+
+        <property name="hibernate.c3p0.preferredTestQuery">SELECT 1;</property>
+        <property name="hibernate.c3p0.testConnectionOnCheckout">true</property>
+
+
+        <mapping class="ru.agiledev.wiki.domain.transformed.Stem"/>
+        <mapping class="ru.agiledev.wiki.domain.core.Page"/>
+        <mapping class="ru.agiledev.wiki.domain.core.Revision"/>
+        <mapping class="ru.agiledev.wiki.domain.core.Text"/>
+        <mapping class="ru.agiledev.wiki.domain.transformed.Word"/>
+
+
+    </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,112 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>ru.agiledev</groupId>
+    <artifactId>aosengine</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0</version>
+    <name>AOS Engine</name>
+    <modules>
+        <module>frontend</module>
+        <module>ysearch</module>
+        <module>core</module>
+        <module>commons</module>
+        <module>wikiparser</module>
+        <module>morph</module>
+    </modules>
+
+
+    <!--==============================================================================-->
+    <!--===========  REPOSITORIES FOR SPECIAL DEPENDENCIES DOWNLOADING ===============-->
+<pluginRepositories>
+        <!--Maven plugin repository-->
+        <pluginRepository>
+            <id>Maven Plugin Repo</id>
+            <url>http://repo1.maven.org/maven2/</url>
+        </pluginRepository>
+
+        <pluginRepository>
+            <id>gwt-maven</id>
+            <url>http://gwt-maven.googlecode.com/svn/trunk/mavenrepo/</url>
+        </pluginRepository>
+
+        <pluginRepository>
+            <id>Codehaus Snapshots 2</id>
+            <url>http://nexus.codehaus.org/snapshots</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>  <!-- Workaround for MNG-2974, see note below -->
+            </releases>
+        </pluginRepository>
+
+    </pluginRepositories>
+
+    <repositories>
+        <repository>
+            <id>Codehaus Snapshots 2</id>
+            <url>http://nexus.codehaus.org/snapshots</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>  <!-- Workaround for MNG-2974, see note below -->
+            </releases>
+        </repository>
+
+        <repository>
+            <id>gwt-maven</id>
+            <url>http://gwt-maven.googlecode.com/svn/trunk/mavenrepo/</url>
+        </repository>
+        <repository>
+            <id>Maven Repo 2</id>
+            <url>http://repo2.maven.org/maven2/</url>
+        </repository>
+        <!--JBoss repository for hibernate dependencies-->
+        <repository>
+            <id>JBoss repository</id>
+            <url>http://repository.jboss.com/maven2/</url>
+        </repository>
+<repository>
+            <id>jboss-public-repository-group</id>
+            <name>JBoss Public Maven Repository Group</name>
+            <url>https://repository.jboss.org/nexus/content/repositories/public</url>
+            <layout>default</layout>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </snapshots>
+        </repository>
+
+
+     </repositories>
+    <!--=========================  END REPOSITORIES ===================================-->
+    <!--===============================================================================-->
+
+    <build>
+        <finalName>${artifactId}</finalName>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <!--Plugin for copying resources in UTF format-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.5</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>

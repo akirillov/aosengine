@@ -1,0 +1,187 @@
+/** Add css rules here for your application. */
+
+
+/** Example rules used by the template application (remove for your app) */
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #777777;
+    margin: 40px 0px 70px;
+    text-align: center;
+}
+
+.sendButton {
+    display: block;
+    font-size: 16pt;
+}
+
+/** Most GWT widgets already have a style name defined */
+.gwt-DialogBox {
+    width: 400px;
+}
+
+.dialogVPanel {
+    margin: 5px;
+}
+
+.serverResponseLabelError {
+    color: red;
+}
+
+.imgLeft{
+    left: 0;
+}
+/*
+.mainPanel {
+    display:block;
+
+        *//*set the div in the center of the screen*//*
+        position:absolute;
+        top:200px;
+        left:35%;
+        width:600px;
+    height: 200px;
+
+}*/
+#container {
+    text-align: center;
+    align: center;
+    min-height:100%;
+    position:relative;
+}
+#header {
+    background:#80C8FE/*#3B9BF4*/;
+    height: 16px;
+    padding-bottom: 9px;
+    text-align: left;
+}
+
+.mainPanel {
+    padding:10px;
+    padding-top: 200px;
+    padding-bottom:300px;   /* Height of the footer */
+    padding-left: 35%;
+}
+.footer {
+    position:absolute;
+    display:block;
+    bottom:0;
+    right: 0;
+    font-size:x-small;
+    width:310px;
+    height:20px;   /* Height of the footer */
+    color:#707070;
+}
+
+.logo{
+    position:relative;
+    text-align: center;
+    align:center;
+}
+
+.queryField{
+    width: 445px;
+}
+
+/*styles for page after search is complete*/
+.mainPanelFilled{
+    padding:10px;
+    /*padding-top: 0px;
+padding-bottom:0px;   *//**//* Height of the footer *//**//**/
+    padding-left:15px;
+}
+
+.resultsPanel{
+    padding:10px;
+    padding-bottom:30px;
+}
+
+.transformPanel{
+    padding: 15px;
+    background: #DCEEFC;
+    width:480px;
+}
+
+.resultEntry {
+    padding: 10px;
+    position: relative;
+    width: 550px;
+}
+
+.resultDomain {
+    font-size: small;
+    color: #24B200;
+}
+
+.searchResultTitle{
+    font-size:16px;
+}
+
+.searchResultText{
+
+}
+
+.yandexBanner{
+    position: relative;
+    padding-top: 5px;
+    vertical-align: bottom;
+}
+
+.yandexLogo{
+    cursor:default;
+}
+
+.yandexLogo:hover{
+    cursor:pointer;
+}
+
+.yandexStats{
+    vertical-align: bottom;
+    padding-left: 5px;
+    font-size: small;
+    padding-top: 6px;
+}
+
+.navyDiv{
+    font-size: small;
+    height: 20px;
+    margin: 0 2px;
+    padding: 5px 4px 0 3px;
+    position: relative;
+}
+
+.navyDiv:hover{
+    background: #3B9BF4;
+}
+
+.navyDivMail{
+    font-size: small;
+    height: 20px;
+    padding: 2px 1px 1px 2px;
+    position: absolute;
+    right:0;
+    top:0;
+}
+
+.navyDivMail:hover{
+    background: #3B9BF4;
+}
+
+/*.navyDivHover{
+    position: relative;
+    height: 18px;
+    padding: 2px;
+    margin: 2px;
+    border-width: 2px;
+    border-color: #C0BFBF;
+}*/
+
+html,
+body {
+    margin:0;
+    padding:0;
+    bottom: 0;
+    height:100%;
+    text-align: center;
+    align:center;
+}

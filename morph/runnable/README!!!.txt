@@ -1,0 +1,2 @@
+To run morphology analyzer it is necessary to install mystem stemmer from http://company.yandex.ru/technology/mystem/
+After that export system environment variable MYSTEM_HOME pointing on place where mystem is placed. Mystem file must be executable.

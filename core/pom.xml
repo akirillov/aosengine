@@ -1,0 +1,81 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>aosengine</artifactId>
+        <groupId>ru.agiledev</groupId>
+        <version>1.0</version>
+    </parent>
+
+    <groupId>ru.agiledev.aos</groupId>
+    <artifactId>core</artifactId>
+    <packaging>jar</packaging>
+    <version>0.1</version>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <!--Plugin for copying resources in UTF format-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.5</version>
+            </plugin>
+
+
+        </plugins>
+    </build>
+
+    <dependencies>
+        <!-- ========================================================================================================-->
+        <!-- =============================   UTILITIES DEPENDENCIES   ===============================================-->
+
+        <dependency>
+            <groupId>ru.agiledev.aos</groupId>
+            <artifactId>commons</artifactId>
+            <version>0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>ru.agiledev</groupId>
+            <artifactId>ysearch</artifactId>
+            <version>0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.8.1</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-net</groupId>
+            <artifactId>commons-net</artifactId>
+            <version>2.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ru.agiledev.aos</groupId>
+            <artifactId>morph</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ru.agiledev</groupId>
+            <artifactId>wikiparser</artifactId>
+            <scope>provided</scope>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
+</project>

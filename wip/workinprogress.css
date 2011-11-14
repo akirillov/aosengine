@@ -1,0 +1,27 @@
+html,
+body {
+    margin:0;
+    padding:0;
+    bottom: 0;
+    height:100%;
+    text-align: center;
+    align:center;
+}
+
+#container {
+    text-align: center;
+    align: center;
+    min-height:100%;
+    position:relative;
+    padding-top: 10%;
+}
+
+#announcement{
+
+}
+	
+#header{
+
+    padding-top: 20px;
+    
+}
